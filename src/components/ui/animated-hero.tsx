@@ -49,7 +49,7 @@ function Hero() {
           </div>
           <div className="flex gap-3 sm:gap-4 flex-col">
             <h1 className="text-3xl sm:text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular"> {/* Adjusted text sizes */}
-              <span className="text-spektr-cyan-50">Building software that's</span>
+              <span className="text-spektr-cyan-50">Building software that&apos;s</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 pt-1">
                 &nbsp;
                 {titles.map((title, index) => (

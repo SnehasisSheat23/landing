@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 import { Menu as MenuIcon, X } from "lucide-react";
 
@@ -155,11 +155,16 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+interface HoveredLinkProps extends Omit<LinkProps, 'className'> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const HoveredLink = ({ children, className, ...rest }: HoveredLinkProps) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className={`text-neutral-700 dark:text-neutral-200 hover:text-black ${className || ''}`}
     >
       {children}
     </Link>
