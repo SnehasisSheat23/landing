@@ -1,10 +1,11 @@
 'use client'
 import { Hero } from "@/components/ui/animated-hero"
-import { Menu, MenuItem, ProductItem, HoveredLink } from "@/components/ui/navbar-menu"
+import { Menu, MenuItem, HoveredLink } from "@/components/ui/navbar-menu"
 import { useState } from "react"
 import { InfiniteSlider } from "@/components/ui/infinite-slider"
-import { MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
 import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects"
 import { Connect } from "@/components/ui/call_to_action"
 import { Footerdemo } from "@/components/ui/footer-section"
@@ -100,9 +101,11 @@ export default function HeroDemo() {
                 key={index}
                 className="flex flex-col items-center gap-3 px-4"
               >
-                <img
+                <Image 
                   src={tech.icon}
                   alt={tech.name}
+                  width={60}
+                  height={60}
                   className="h-[40px] sm:h-[60px] w-auto hover:scale-110 transition-transform dark:invert-[.85]"
                 />
                 <span className="text-sm text-muted-foreground hidden sm:block">

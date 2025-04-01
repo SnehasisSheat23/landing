@@ -77,7 +77,7 @@ function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center px-4 sm:px-0"> {/* Adjusted text size and added padding */}
-              Build softwares that transform ideas into powerful solutions. We design, develop, and scale applications that drive innovation and efficiency for businesses and users alike.
+              Build software that transforms ideas into powerful solutions. We design, develop, and scale applications that drive innovation and efficiency for businesses and users alike.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto px-4 sm:px-0"> {/* Made buttons stack on mobile */}
