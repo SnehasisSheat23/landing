@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
 export interface InputProps
@@ -7,6 +6,12 @@ export interface InputProps
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
+    const [mounted, setMounted] = React.useState(false)
+
+    React.useEffect(() => {
+      setMounted(true)
+    }, [])
+
     return (
       <input
         type={type}
@@ -15,7 +20,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className
         )}
         ref={ref}
-        {...props}
+        suppressHydrationWarning={true}
+        {...(mounted ? props : {
+          ...props,
+          'data-temp-mail-org': undefined,
+          style: undefined
+        })}
       />
     )
   }
